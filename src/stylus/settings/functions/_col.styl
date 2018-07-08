@@ -1,0 +1,77 @@
+// Will make the column helpers.
+make-column-helpers($breakpoint)
+  .v-col
+    +variant($breakpoint + '-align-center')
+      align-self: flex-start
+
+    +variant($breakpoint + '-align-center')
+      align-self: center
+
+    +variant($breakpoint + '-align-bottom')
+      align-self: flex-end
+
+    +variant($breakpoint + '-first')
+      order: -1
+
+    +variant($breakpoint + '-reset')
+      order: 0
+
+    +variant($breakpoint + '-last')
+      order: 1
+
+    +variant($breakpoint + '-flex')
+      display: flex
+
+// Will make the default column.
+make-default-column($breakpoint)
+  .v-col
+    +variant($breakpoint)
+      flex-grow: 1
+      flex-basis: 0
+      max-width: 100%
+
+// Will make a single column
+make-responsive-column($breakpoint, $column, $width)
+  .v-col
+    +variant($breakpoint + '-' + $column)
+      flex: 0 0 ($width) %
+
+// Will make the columns.
+make-responsive-columns($columns, $breakpoint)
+  for $column in 0 .. $columns
+    if $column == 0
+      $width = 0
+    else
+      $width = 100 / $columns * $column
+    make-responsive-column($breakpoint, $column, $width)
+
+// Will make a single offset
+make-offset-column($breakpoint, $column, $margin)
+  .v-col
+    +variant($breakpoint + '-offset-' + $column)
+      margin-left: ($margin) %
+
+// Will make the offsets.
+make-offset-columns($columns, $breakpoint)
+  for $column in 0 .. $columns
+    if $column == 0
+      $offset = 0
+    else
+      $offset = 100 / $columns * $column
+    make-offset-column($breakpoint, $column, $offset)
+
+// Will make a single grid column
+make-column($breakpoint, $columns)
+  make-column-helpers($breakpoint)
+  make-default-column($breakpoint)
+  make-responsive-columns($columns, $breakpoint)
+  make-offset-columns($columns, $breakpoint)
+
+// Will make the grid columns
+make-columns($breakpoints, $columns)
+  for $breakpoint, $width in $breakpoints
+    if $width == 0
+      make-column($breakpoint, $columns)
+    else
+      @media (min-width: $width)
+        make-column($breakpoint, $columns)

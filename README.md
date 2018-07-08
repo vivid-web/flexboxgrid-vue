@@ -106,16 +106,11 @@ use are `0..12`.
 The breakpoints and the column size can be passed as `variant` or `variants` property. Each of the
 components takes a couple of property that are available.
 
-| Name       | Type          | Required | Description                                             |
-| -----------| :-----------: | :------: | :------------------------------------------------------ |
-| `variant`  | String        | `false`  | Each component can have a variant. This is used for the |
-|            |               |          | BEM styling. Underwater a `VCol` with a variant of      |
-|            |               |          | `md-6` will result to `v-col--md-6`.                    |
-| `variants` | Array         | `false`  | Each component can have an array of variants. This does |
-|            |               |          | the same as `variant`, but will apply an array instead  |
-|            |               |          | of a single string.                                     |
-| `content`  | String|Number | `false`  | If no slot is given, you can pass the content as a      |
-|            |               |          | property.                                               |
+| Name       | Type          | Required | Description                                                  |
+| -----------| :-----------: | :------: | :----------------------------------------------------------- |
+| `variant`  | String        | `false`  | Each component can have a variant.                           |
+| `variants` | Array         | `false`  | Each component can have an array of variants.                |
+| `content`  | String|Number | `false`  | If no slot is given, you can pass the content as a property. |
 
 ### VGrid
 This is the container for the whole rows and columns.

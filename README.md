@@ -119,8 +119,6 @@ This is the container for the whole rows and columns.
 The grid has the following variants:
  - `container`
  Will create a boxed container with a max-width of 1200px.
- - `no-gutters`
- Will create a container with no gutters.
  - `[$breakpoints]-no-gutters`
 Will create a grid with no gutters. Can also be used without a breakpoint.
 

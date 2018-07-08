@@ -12,9 +12,13 @@ methodology. For more information, visit
     -  [Configuration](#configuration)
  - [Components](#components)
     -  [VGrid](#vgrid)
+      -  [Variants](#variants)
     -  [VRow](#vrow)
+      -  [Variants](#variants-1)
     -  [VCol](#vcol)
+      -  [Variants](#variants-2)
     -  [VText](#vtext)
+      -  [Variants](#variants-3)
  - [Authors](#authors)
  - [More Information](#more-information)
  - [License](#license)
@@ -22,7 +26,7 @@ methodology. For more information, visit
 ## Getting started ##
 In this paragraph we will discuss how to install and configure this project.
 
-## Installation ##
+### Installation ##
 To install Flexboxgrid Vue, use one of the following methods.
 ```bash
 $ npm install flexboxgrid-vue --save

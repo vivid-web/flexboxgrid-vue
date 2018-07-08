@@ -1,7 +1,10 @@
 // Will make the column helpers.
 make-column-helpers($breakpoint)
   .v-col
-    +variant($breakpoint + '-align-center')
+    +variant($breakpoint + '-no-gutters')
+      padding: 0
+
+    +variant($breakpoint + '-align-top')
       align-self: flex-start
 
     +variant($breakpoint + '-align-center')
@@ -13,11 +16,11 @@ make-column-helpers($breakpoint)
     +variant($breakpoint + '-first')
       order: -1
 
-    +variant($breakpoint + '-reset')
-      order: 0
-
     +variant($breakpoint + '-last')
       order: 1
+
+    +variant($breakpoint + '-reset')
+      order: 0
 
     +variant($breakpoint + '-flex')
       display: flex

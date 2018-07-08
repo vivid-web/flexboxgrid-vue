@@ -11,4 +11,25 @@
   +variant('no-gutters')
     padding: 0
 
+  +variant('align-top')
+    align-self: flex-start
+
+  +variant('align-center')
+    align-self: center
+
+  +variant('align-bottom')
+    align-self: flex-end
+
+  +variant('first')
+    order: -1
+
+  +variant('last')
+    order: 1
+
+  +variant('reset')
+    order: 0
+
+  +variant('flex')
+    display: flex
+
 make-columns($breakpoints, $columns)

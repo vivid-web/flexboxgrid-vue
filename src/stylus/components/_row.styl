@@ -16,4 +16,16 @@
   +variant('no-gutters')
     margin: 0
 
+  +variant('top')
+    align-items: flex-start
+
+  +variant('center')
+    align-items: center
+
+  +variant('bottom')
+    align-items: flex-end
+
+  +variant('reverse')
+    flex-direction: row-reverse
+
 make-rows($breakpoints)

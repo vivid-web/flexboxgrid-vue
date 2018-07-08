@@ -110,7 +110,7 @@ components takes a couple of property that are available.
 | -----------| :-----------: | :------: | :----------------------------------------------------------- |
 | `variant`  | String        | `false`  | Each component can have a variant.                           |
 | `variants` | Array         | `false`  | Each component can have an array of variants.                |
-| `content`  | String|Number | `false`  | If no slot is given, you can pass the content as a property. |
+| `content`  | String/Number | `false`  | If no slot is given, you can pass the content as a property. |
 
 ### VGrid
 This is the container for the whole rows and columns.

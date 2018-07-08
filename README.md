@@ -25,7 +25,7 @@ In this paragraph we will discuss how to install and configure this project.
 ## Installation ##
 To install Flexboxgrid Vue, use one of the following methods.
 ```bash
-$ npm install flexboxgrid-vue
+$ npm install flexboxgrid-vue --save
 
 # or yarn
 $ yarn add flexboxgrid-vue

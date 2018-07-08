@@ -1,15 +1,31 @@
 {
-  "name": "flexbox-grid-vue",
+  "name": "@vivid-web/flexboxgrid-vue",
   "version": "0.0.0",
   "description": "A simple flexbox CSS grid system with Vue",
   "main": "src/index.js",
-  "repository": "git@github.com:vivid-web/flexbox-grid-vue.git",
-  "author": "Peter van Meijgaard <info@vivid-websolutions.nl>",
-  "license": "MIT",
   "devDependencies": {
     "vue": "^2.5.16"
   },
   "peerDependencies": {
     "vue": "^2.5.16"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vivid-web/flexbox-grid-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "flexbox",
+    "grid",
+    "vivid",
+    "web",
+    "vuejs",
+    "frontend"
+  ],
+  "author": "Peter van Meijgaard <info@vivid-websolutions.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivid-web/flexbox-grid-vue/issues"
+  },
+  "homepage": "https://github.com/vivid-web/flexbox-grid-vue#readme"
 }

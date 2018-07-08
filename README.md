@@ -75,6 +75,15 @@ export default {
    * The name of the component. 
    */
   name: 'MyAwesomeComponent',
+
+  /**
+   * The components that this component can use. 
+   */
+  components: {
+    VGrid,
+    VRow,
+    VCol,
+  },
 }
 </script>
 

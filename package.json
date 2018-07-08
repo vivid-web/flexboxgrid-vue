@@ -3,31 +3,18 @@
   "version": "0.0.0",
   "description": "A simple flexbox CSS grid system with Vue",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "rollup -c build/rollup.config.prod.js",
     "dev": "rollup -c build/rollup.config.prod.js -w",
-    "lint": "eslint ."
-  },
-  "peerDependencies": {
-    "vue": "^2.5.16"
-  },
-  "dependencies": {
-    "stylus": "^0.54.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0-beta.52",
-    "@babel/plugin-external-helpers": "^7.0.0-beta.52",
-    "@babel/preset-env": "^7.0.0-beta.52",
-    "babel-eslint": "^8.2.5",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-vue": "^4.5.0",
-    "rollup": "^0.62.0",
-    "rollup-plugin-babel": "^4.0.0-beta.7",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-uglify": "^4.0.0"
+    "lint": "eslint .",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -42,13 +29,33 @@
     "vuejs",
     "frontend"
   ],
-  "author": "Peter van Meijgaard <info@vivid-websolutions.nl>",
+  "author": "Vivid Websolutions <info@vivid-websolutions.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vivid-web/flexboxgrid-vue/issues"
   },
   "homepage": "https://flexboxgrid.vivid-websolutions.nl",
-  "publishConfig": {
-    "access": "public"
+  "peerDependencies": {
+    "vue": "^2.5.16"
+  },
+  "dependencies": {
+    "stylus": "^0.54.5",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.52",
+    "@babel/plugin-external-helpers": "^7.0.0-beta.52",
+    "@babel/preset-env": "^7.0.0-beta.52",
+    "babel-eslint": "^8.2.5",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^4.0.0-beta.7",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-uglify": "^4.0.0"
   }
 }

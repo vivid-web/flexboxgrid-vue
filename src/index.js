@@ -5,6 +5,7 @@ export const {
   VCol,
   VGrid,
   VRow,
+  VText,
 } = components;
 
 const FlexboxgridVue = {
@@ -16,7 +17,7 @@ const FlexboxgridVue = {
   install(Vue) {
     // Register all the components.
     Object.values(components).forEach((component) => {
-      Vue.use(component);
+      Vue.component(component.name, component);
     });
   },
 };

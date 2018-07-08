@@ -1,5 +1,5 @@
-// Will make the row helpers.
-make-row-helpers($breakpoint)
+// Will make a single grid row.
+make-row($breakpoint)
   .v-row
     +variant($breakpoint + '-top')
       align-items: flex-start
@@ -12,10 +12,6 @@ make-row-helpers($breakpoint)
 
     +variant($breakpoint + '-reverse')
       flex-direction: row-reverse
-
-// Will make a single grid row.
-make-row($breakpoint)
-  make-row-helpers($breakpoint)
 
 // Will make the grid rows.
 make-rows($breakpoints)

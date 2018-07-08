@@ -1,0 +1,20 @@
+// Will make a single text item.
+make-single-text($breakpoint)
+  .v-text
+    +variant($breakpoint + '-right')
+      text-align: right
+
+    +variant($breakpoint + '-left')
+      text-align: left
+
+    +variant($breakpoint + '-center')
+      text-align: center
+
+// Will make the text.
+make-text($breakpoints)
+  for $breakpoint, $width in $breakpoints
+    if $width == 0
+      make-single-text($breakpoint)
+    else
+      @media (min-width: $width)
+        make-single-text($breakpoint)

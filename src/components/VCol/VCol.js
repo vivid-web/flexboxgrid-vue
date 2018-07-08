@@ -3,6 +3,7 @@ import componentable from '../../mixins/componentable';
 // Import the styling for this component.
 import '../../stylus/components/_col.styl';
 
+/* @vue/component */
 export default {
   /**
    * The name of the component.

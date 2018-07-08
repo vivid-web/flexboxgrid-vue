@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import styleable from './styleable';
-import bem from './../utilities/BEM';
+import bem from '../utilities/BEM';
 
 export default Vue.extend({
   /**
    * The name of the block.
    */
-  name: 'blockable',
+  name: 'Blockable',
 
   /**
    * The mixins that this mixin will extend from.
@@ -25,8 +25,8 @@ export default Vue.extend({
      * @returns {String[]} The correct CSS classes.
      */
     classes() {
-      return bem.getBlockClassNames(this.$options.name, this.getVariants)
+      return bem.getBlockClassNames(this.$options.block, this.getVariants)
         .map(className => this.getClassName(className));
-    }
+    },
   },
 });

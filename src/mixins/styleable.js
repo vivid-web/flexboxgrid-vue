@@ -4,7 +4,7 @@ export default Vue.extend({
   /**
    * The name of the mixin.
    */
-  name: 'styleable',
+  name: 'Styleable',
 
   /**
    * The properties that this mixin will add.
@@ -64,9 +64,7 @@ export default Vue.extend({
      * @returns {String} The correct CSS class.
      */
     getClassName(className) {
-      return this.$style ?
-        this.$style[className] :
-        className;
+      return this.$style ? this.$style[className] : className;
     },
   },
 });

@@ -4,7 +4,7 @@ export default Vue.extend({
   /**
    * The name of the mixin.
    */
-  name: 'slotable',
+  name: 'Slotable',
 
   /**
    * The properties that this mixin will add.
@@ -30,9 +30,7 @@ export default Vue.extend({
      * @returns {String[]|VNode[]} The children that will be rendered inside the slot.
      */
     children() {
-      return this.hasSlot() ?
-        [...this.$slots.default] :
-        [...this.content];
+      return this.hasSlot() ? [...this.$slots.default] : [...this.content];
     },
   },
 

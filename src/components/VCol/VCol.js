@@ -1,12 +1,19 @@
-import '../../stylus/components/_col.styl';
+import componentable from '../../mixins/componentable';
 
-import componentable from './../../mixins/componentable';
+// Import the styling for this component.
+import '../../stylus/components/_col.styl';
 
 export default {
   /**
    * The name of the component.
    */
-  name: 'v-col',
+  name: 'VCol',
+
+  /**
+   * The name of the block.
+   * Used for the BEM styling.
+   */
+  block: 'v-col',
 
   /**
    * The mixins that this component will use.

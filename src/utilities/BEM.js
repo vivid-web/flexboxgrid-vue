@@ -112,9 +112,7 @@ class BEM {
   getClassNames(item, variants = []) {
     const classNames = [item];
 
-    return variants.length === 0 ?
-      classNames :
-      classNames.concat(this.variants(item, variants));
+    return variants.length === 0 ? classNames : classNames.concat(this.variants(item, variants));
   }
 
   /**

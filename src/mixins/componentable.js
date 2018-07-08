@@ -4,6 +4,11 @@ import slotable from './slotable';
 
 export default Vue.extend({
   /**
+   * The name of the block.
+   */
+  name: 'Componentable',
+
+  /**
    * The mixins that this component will use.
    */
   mixins: [blockable, slotable],
@@ -17,7 +22,7 @@ export default Vue.extend({
    */
   render(h) {
     return h('div', {
-      'class': this.classes,
+      class: this.classes,
     }, this.children);
   },
 });

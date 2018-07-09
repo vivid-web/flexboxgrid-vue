@@ -37,30 +37,28 @@ make-default-column($breakpoint)
 make-responsive-column($breakpoint, $column, $width)
   .v-col
     +variant($breakpoint + '-' + $column)
-      flex: 0 0 ($width) %
+      flex: 0 0 $width
 
 // Will make the columns.
 make-responsive-columns($columns, $breakpoint)
   for $column in 0 .. $columns
-    if $column == 0
-      $width = 0
-    else
-      $width = 100 / $columns * $column
+    $width = 0
+    if $column != 0
+      $width = (100 / $columns * $column) %
     make-responsive-column($breakpoint, $column, $width)
 
 // Will make a single offset
 make-offset-column($breakpoint, $column, $margin)
   .v-col
     +variant($breakpoint + '-offset-' + $column)
-      margin-left: ($margin) %
+      margin-left: $margin
 
 // Will make the offsets.
 make-offset-columns($columns, $breakpoint)
   for $column in 0 .. $columns
-    if $column == 0
-      $offset = 0
-    else
-      $offset = 100 / $columns * $column
+    $offset = 0
+    if $column != 0
+      $offset = (100 / $columns * $column) %
     make-offset-column($breakpoint, $column, $offset)
 
 // Will make a single grid column

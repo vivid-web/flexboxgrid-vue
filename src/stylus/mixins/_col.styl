@@ -45,7 +45,7 @@ make-responsive-columns($columns, $breakpoint)
   for $column in 0 .. $columns
     $width = 0
     if $column != 0
-      $width = (100 / $columns * $column) %
+      $width = percentage(1 / $columns * $column)
     make-responsive-column($breakpoint, $column, $width)
 
 // Will make a single offset
@@ -59,7 +59,7 @@ make-offset-columns($columns, $breakpoint)
   for $column in 0 .. $columns
     $offset = 0
     if $column != 0
-      $offset = (100 / $columns * $column) %
+      $offset = percentage(1 / $columns * $column)
     make-offset-column($breakpoint, $column, $offset)
 
 // Will make a single grid column

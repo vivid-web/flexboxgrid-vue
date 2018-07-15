@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import blockable from './blockable';
-import slotable from './slotable';
+import Blockable from './Blockable';
+import Slotable from './Slotable';
 
 export default Vue.extend({
   /**
@@ -11,7 +11,7 @@ export default Vue.extend({
   /**
    * The mixins that this component will use.
    */
-  mixins: [blockable, slotable],
+  mixins: [Blockable, Slotable],
 
   /**
    * Renders the component.

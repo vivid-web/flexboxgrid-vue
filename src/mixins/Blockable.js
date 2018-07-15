@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import styleable from './styleable';
+import Styleable from './Styleable';
 import bem from '../utilities/BEM';
 
 export default Vue.extend({
@@ -12,7 +12,7 @@ export default Vue.extend({
    * The mixins that this mixin will extend from.
    */
   mixins: [
-    styleable,
+    Styleable,
   ],
 
   /**

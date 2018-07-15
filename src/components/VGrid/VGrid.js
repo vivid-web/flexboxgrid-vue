@@ -1,4 +1,4 @@
-import Componentable from '../../mixins/Componentable';
+import Blockable from '../../mixins/Blockable';
 
 // Import the styling for this component.
 import '../../stylus/components/_grid.styl';
@@ -19,5 +19,5 @@ export default {
   /**
    * The mixins that this component will use.
    */
-  mixins: [Componentable],
+  mixins: [Blockable],
 };

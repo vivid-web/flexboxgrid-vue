@@ -4,13 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 [Compare v1.0.4 - Unreleased](https://github.com/vivid-web/flexboxgrid-vue/compare/v1.0.4...develop)
-### Fixed
- - It's possible to pass a `content`-property to all the components as a string.
- - The mixins are now named pascal case.
-
 ### Added
  - A `CHANGELOG.md`-file which will hold all the changes to this project.
  - A `LICENSE`-file for displaying the license used for this project.
+ 
+### Fixed
+ - It's possible to pass a `content`-property to all the components as a string.
+ - The mixins are now named pascal case.
+ - Added the `render`-function from the `Componentable`-mixin to the `Blockable`-mixin.
+
+### Removed
+ - Removed the `Componentable`-mixin.
 
 ## [v1.0.4](https://github.com/vivid-web/flexboxgrid-vue/releases/tag/v1.0.4) - 2018-07-12
 [Compare v1.0.3 - v1.0.4](https://github.com/vivid-web/flexboxgrid-vue/compare/v1.0.3...v1.0.4)

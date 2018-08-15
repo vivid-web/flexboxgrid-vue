@@ -1,4 +1,4 @@
-import componentable from '../../mixins/componentable';
+import Blockable from '../../mixins/Blockable';
 
 // Import the styling for this component.
 import '../../stylus/components/_text.styl';
@@ -19,5 +19,5 @@ export default {
   /**
    * The mixins that this component will use.
    */
-  mixins: [componentable],
+  mixins: [Blockable],
 };

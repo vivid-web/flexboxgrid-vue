@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import styleable from './styleable';
+import Slotable from './Slotable';
+import Styleable from './Styleable';
 import bem from '../utilities/BEM';
 
 export default Vue.extend({
@@ -12,7 +13,8 @@ export default Vue.extend({
    * The mixins that this mixin will extend from.
    */
   mixins: [
-    styleable,
+    Styleable,
+    Slotable,
   ],
 
   /**
@@ -28,5 +30,18 @@ export default Vue.extend({
       return bem.getBlockClassNames(this.$options.block, this.getVariants)
         .map(className => this.getClassName(className));
     },
+  },
+
+  /**
+   * Renders the component.
+   *
+   * @param {Function} h Will create the DOM element.
+   *
+   * @returns {VNode} The virtual DOM tree.
+   */
+  render(h) {
+    return h('div', {
+      class: this.classes,
+    }, this.children);
   },
 });
